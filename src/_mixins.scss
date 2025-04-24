@@ -1,0 +1,49 @@
+@mixin primary-background-gradient {
+  background-color: transparent;
+  background-image: $primary_gradient;
+}
+
+@mixin secondary-background-gradient {
+  background-color: transparent;
+  background-image: $secondary_gradient;
+}
+
+@mixin critical-background-gradient {
+  background-color: transparent;
+  background-image: $critical_gradient;
+}
+
+@mixin success-background-gradient {
+  background-color: transparent;
+  background-image: $success_gradient;
+}
+
+@mixin red-background-gradient {
+  background-color: transparent;
+  background-image: $red_gradient;
+}
+
+@mixin blue-background-gradient {
+  background-color: transparent;
+  background-image: $blue_gradient;
+}
+
+@mixin green-background-gradient {
+  background-color: transparent;
+  background-image: $green_gradient;
+}
+
+@mixin grey-background-gradient {
+  background-color: transparent;
+  background-image: $grey_gradient;
+}
+
+@mixin orange-background-gradient {
+  background-color: transparent;
+  background-image: $orange_gradient;
+}
+
+@mixin badge-rounded {
+  border-radius: 15px;
+  padding: 0 5px;
+}

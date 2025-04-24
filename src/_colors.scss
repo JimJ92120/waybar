@@ -1,0 +1,64 @@
+$primary_color: #fbf1c7;
+$secondary_color: #857c6d;
+$dark_color: #140114;
+$background_color: #060006;
+
+$primary_gradient: linear-gradient(
+  to right,
+  rgba(107, 14, 14, 0.1) 0%,
+  rgba(42, 9, 9, 0.1) 20%,
+  rgba(33, 3, 40, 0.2) 60%,
+  rgba(8, 0, 8, 0.2) 100%
+);
+$secondary_gradient: linear-gradient(
+  to left,
+  rgba(107, 14, 14, 0.1) 0%,
+  rgba(42, 9, 9, 0.1) 20%,
+  rgba(33, 3, 40, 0.2) 60%,
+  rgba(8, 0, 8, 0.2) 100%
+);
+
+$critical_gradient: linear-gradient(
+  to right,
+  rgba(172, 21, 21, 0.5) 0%,
+  rgba(78, 8, 8, 0.4) 50%,
+  rgba(42, 9, 9, 0.2) 75%,
+  rgba(107, 14, 14, 0.2) 100%
+);
+$success_gradient: linear-gradient(
+  to right,
+  rgba(119, 172, 21, 0.4) 0%,
+  rgba(25, 37, 2, 0.4) 0%,
+  rgba(42, 9, 9, 0.2) 75%,
+  rgba(107, 14, 14, 0.2) 100%
+);
+$red_gradient: linear-gradient(
+  to right,
+  rgba(172, 21, 21, 0.4) 0%,
+  rgba(42, 9, 9, 0.2) 75%,
+  rgba(107, 14, 14, 0.2) 100%
+);
+$blue_gradient: linear-gradient(
+  to right,
+  rgba(21, 109, 172, 0.4) 0%,
+  rgba(42, 9, 9, 0.2) 75%,
+  rgba(107, 14, 14, 0.2) 100%
+);
+$green_gradient: linear-gradient(
+  to right,
+  rgba(119, 172, 21, 0.4) 0%,
+  rgba(42, 9, 9, 0.2) 75%,
+  rgba(107, 14, 14, 0.2) 100%
+);
+$grey_gradient: linear-gradient(
+  to right,
+  rgba(63, 77, 87, 0.4) 0%,
+  rgba(42, 9, 9, 0.2) 75%,
+  rgba(107, 14, 14, 0.2) 100%
+);
+$orange_gradient: linear-gradient(
+  to right,
+  rgba(172, 107, 21, 0.4) 0%,
+  rgba(42, 9, 9, 0.2) 75%,
+  rgba(107, 14, 14, 0.2) 100%
+);
