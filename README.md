@@ -8,9 +8,9 @@ Some `waybar` config and theming.
 
 # installation
 
-|        |     |
-| ------ | --- |
-| `node` |     |
+| requirements |     |
+| ------------ | --- |
+| `node`       |     |
 
 ```sh
 git clone <repository-name>
@@ -27,10 +27,21 @@ npm run build # production
 
 ### output
 
-- `gtk-3.0/style.css`
-- `gtk-4.0/style.css`
-- `index.theme`
-- some assets
+```
+/
+  style.css
+
+  /dist
+    style.css
+```
+
+# run
+
+```sh
+chmod +x ./waybar.sh
+
+./waybar.sh
+```
 
 ---
 
