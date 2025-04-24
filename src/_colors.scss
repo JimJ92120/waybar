@@ -3,19 +3,19 @@ $secondary_color: #857c6d;
 $dark_color: #140114;
 $background_color: #060006;
 
-$primary_gradient: linear-gradient(
+$secondary_gradient: linear-gradient(
   to right,
   rgba(107, 14, 14, 0.1) 0%,
-  rgba(42, 9, 9, 0.2) 20%,
-  rgba(33, 3, 40, 0.3) 60%,
-  rgba(8, 0, 8, 0.4) 100%
+  rgba(42, 9, 9, 0.3) 20%,
+  rgba(33, 3, 40, 0.4) 60%,
+  rgba(8, 0, 8, 0.5) 100%
 );
 $secondary_gradient: linear-gradient(
   to left,
-  rgba(107, 14, 14, 0.4) 0%,
+  rgba(107, 14, 14, 0.1) 0%,
   rgba(42, 9, 9, 0.3) 20%,
-  rgba(33, 3, 40, 0.2) 60%,
-  rgba(8, 0, 8, 0.1) 100%
+  rgba(33, 3, 40, 0.4) 60%,
+  rgba(8, 0, 8, 0.5) 100%
 );
 $light_gradient: linear-gradient(
   to right,
