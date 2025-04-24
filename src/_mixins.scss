@@ -1,3 +1,8 @@
+@mixin background-reset {
+  background-color: transparent;
+  background-image: none;
+}
+
 @mixin primary-background-gradient {
   background-color: transparent;
   background-image: $primary_gradient;

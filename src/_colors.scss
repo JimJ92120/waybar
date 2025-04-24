@@ -1,21 +1,25 @@
-$primary_color: #fbf1c7;
-$secondary_color: #857c6d;
-$dark_color: #140114;
-$background_color: #060006;
+$primary_color: rgb(251, 241, 199);
+$secondary_color: rgb(133, 124, 109);
+$dark_color: rgb(10, 0, 10);
+$background_color: rgb(6, 0, 6);
+$success_color: rgb(233, 251, 199);
+$error_color: rgb(251, 199, 199);
+$warning_color: rgb(251, 221, 199);
+$destructive_color: rgb(252, 169, 163);
 
-$secondary_gradient: linear-gradient(
+$primary_gradient: linear-gradient(
   to right,
   rgba(107, 14, 14, 0.1) 0%,
   rgba(42, 9, 9, 0.3) 20%,
   rgba(33, 3, 40, 0.4) 60%,
-  rgba(8, 0, 8, 0.5) 100%
+  rgba(6, 0, 6, 0.5) 100%
 );
 $secondary_gradient: linear-gradient(
   to left,
   rgba(107, 14, 14, 0.1) 0%,
   rgba(42, 9, 9, 0.3) 20%,
   rgba(33, 3, 40, 0.4) 60%,
-  rgba(8, 0, 8, 0.5) 100%
+  rgba(6, 0, 6, 0.5) 100%
 );
 $light_gradient: linear-gradient(
   to right,

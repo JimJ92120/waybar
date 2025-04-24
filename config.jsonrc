@@ -9,12 +9,9 @@
     "hyprland/mode",
     "custom/media"
   ],
-  "modules-center": [
-    "idle_inhibitor",
-    "clock",
-    "power-profiles-daemon"
-  ],
+  "modules-center": ["idle_inhibitor", "clock", "power-profiles-daemon"],
   "modules-right": [
+    "custom/nixos-clean",
     "mpd",
     "pulseaudio",
     "memory",
@@ -27,7 +24,7 @@
     "tray",
     "custom/power"
   ],
-  // https://man.archlinux.org/man/extra/waybar/waybar-hyprland-workspaces.5.en
+  // left
   "hyprland/workspaces": {
     "active-only": false,
     "all-outputs": false
@@ -38,6 +35,48 @@
       "(^.{,25}) - (.*)": "$2 > $1",
       "(^.{0,25})(.*) - (.*)": "$3 > $1..."
     }
+  },
+  "custom/media": {
+    "format": "{icon} {text}",
+    "return-type": "json",
+    "max-length": 40,
+    "format-icons": {
+      "spotify": "",
+      "default": "🎜"
+    },
+    "escape": true,
+    "exec": "$HOME/.config/waybar/modules/mediaplayer.py 2> /dev/null"
+  },
+  // center
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "",
+      "deactivated": ""
+    }
+  },
+  "clock": {
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format-alt": "{:%Y-%m-%d}"
+  },
+  "power-profiles-daemon": {
+    "format": "{icon}",
+    "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+    "tooltip": true,
+    "format-icons": {
+      "default": "",
+      "performance": "",
+      "balanced": "",
+      "power-saver": ""
+    }
+  },
+
+  // right
+  "custom/nixos-clean": {
+    "format": "&#9851;",
+    "return-type": "",
+    "on-click": "kitty -e sudo nix-collect-garbage -d && nixos-rebuild boot",
+    "tooltip": false
   },
   "mpd": {
     "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
@@ -65,80 +104,6 @@
     "tooltip-format": "MPD (connected)",
     "tooltip-format-disconnected": "MPD (disconnected)"
   },
-  "idle_inhibitor": {
-    "format": "{icon}",
-    "format-icons": {
-      "activated": "",
-      "deactivated": ""
-    }
-  },
-  "tray": {
-    "spacing": 10
-  },
-  "clock": {
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format-alt": "{:%Y-%m-%d}"
-  },
-  "memory": {
-    "format": "{}% "
-  },
-  // cpu
-  "cpu": {
-    "format": "{usage}% ",
-    "tooltip": false
-  },
-  "temperature": {
-    "thermal-zone": 5,
-    "critical-threshold": 90,
-    "format": "{temperatureC}°C",
-    "format-icons": ["", "", ""]
-  },
-  // gpu
-  "custom/gpu": {
-    "format": "{}%",
-    "interval": 1,
-    "return-type": "",
-    "exec": "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader | sed 's/%//'"
-  },
-  "custom/temperature_gpu": {
-    "format": "{}°C",
-    "interval": 1,
-    "return-type": "",
-    "exec": "nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader"
-  },
-  "battery": {
-    "states": {
-      "good": 95,
-      "warning": 30,
-      "critical": 15
-    },
-    "format": "{capacity}% {icon}",
-    "format-full": "{capacity}% {icon}",
-    "format-charging": "{capacity}% ",
-    "format-plugged": "{capacity}% ",
-    "format-alt": "{time} {icon}",
-    "format-icons": ["", "", "", "", ""]
-  },
-  "power-profiles-daemon": {
-    "format": "{icon}",
-    "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-    "tooltip": true,
-    "format-icons": {
-      "default": "",
-      "performance": "",
-      "balanced": "",
-      "power-saver": ""
-    }
-  },
-  "network": {
-    "format-wifi": "{essid} ({signalStrength}%) ",
-    // "format-ethernet": "{ipaddr}/{cidr} ",
-    "format-ethernet": "",
-    "tooltip-format": "{ifname} via {gwaddr} ",
-    "format-linked": "{ifname} (No IP) ",
-    "format-disconnected": "Disconnected ⚠",
-    // "format-alt": "{ifname}: {ipaddr}/{cidr}"
-  },
   "pulseaudio": {
     "format": "{volume}% {icon} {format_source}",
     "format-bluetooth": "{volume}% {icon} {format_source}",
@@ -157,16 +122,59 @@
     },
     "on-click": "pavucontrol"
   },
-  "custom/media": {
-    "format": "{icon} {text}",
-    "return-type": "json",
-    "max-length": 40,
-    "format-icons": {
-      "spotify": "",
-      "default": "🎜"
+  "memory": {
+    "format": "{}% "
+  },
+  "temperature": {
+    "thermal-zone": 5,
+    "critical-threshold": 90,
+    "format": "{temperatureC}°C",
+    "format-icons": ["", "", ""]
+  },
+  "cpu": {
+    "format": "{usage}% ",
+    "tooltip": false
+  },
+  "custom/temperature_gpu": {
+    "format": "{}°C",
+    "interval": 1,
+    "return-type": "",
+    "exec": "nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader",
+    "tooltip": false
+  },
+  "custom/gpu": {
+    "format": "{}% &#9974;",
+    "interval": 1,
+    "return-type": "",
+    "exec": "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader | sed 's/%//'",
+    "tooltip": false,
+    "on-click": "kitty -e watch -n1 nvidia-smi"
+  },
+  "network": {
+    "format-wifi": "{essid} ({signalStrength}%) ",
+    // "format-ethernet": "{ipaddr}/{cidr} ",
+    "format-ethernet": "",
+    "tooltip-format": "{ifname} via {gwaddr} ",
+    "format-linked": "{ifname} (No IP) ",
+    "format-disconnected": "Disconnected ⚠",
+    // "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    "tooltip": false
+  },
+  "battery": {
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 15
     },
-    "escape": true,
-    "exec": "$HOME/.config/waybar/modules/mediaplayer.py 2> /dev/null"
+    "format": "{capacity}% {icon}",
+    "format-full": "{capacity}% {icon}",
+    "format-charging": "{capacity}% ",
+    "format-plugged": "{capacity}% ",
+    "format-alt": "{time} {icon}",
+    "format-icons": ["", "", "", "", ""]
+  },
+  "tray": {
+    "spacing": 10
   },
   "custom/power": {
     "format": "⏻",
@@ -177,7 +185,6 @@
       "shutdown": "shutdown -h now",
       "reboot": "reboot",
       "suspend": "systemctl suspend"
-      // "hibernate": "systemctl hibernate"
     }
   }
 }
