@@ -17,6 +17,13 @@ $secondary_gradient: linear-gradient(
   rgba(33, 3, 40, 0.2) 60%,
   rgba(8, 0, 8, 0.2) 100%
 );
+$light_gradient: linear-gradient(
+  to right,
+  rgba(172, 21, 21, 0.4) 0%,
+  rgba(78, 8, 8, 0.4) 50%,
+  rgba(184, 121, 121, 0.3) 75%,
+  rgba(247, 217, 217, 0.3) 100%
+);
 
 $critical_gradient: linear-gradient(
   to right,

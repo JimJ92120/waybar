@@ -8,6 +8,11 @@
   background-image: $secondary_gradient;
 }
 
+@mixin light-background-gradient {
+  background-color: transparent;
+  background-image: $light_gradient;
+}
+
 @mixin critical-background-gradient {
   background-color: transparent;
   background-image: $critical_gradient;
