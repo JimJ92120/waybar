@@ -1,0 +1,95 @@
+window#waybar {
+  #mode {
+    background-color: #64727d;
+    box-shadow: inset 0 -3px #ffffff;
+  }
+
+  #idle_inhibitor,
+  #custom-power,
+  #tray {
+    @include badge-rounded;
+  }
+
+  #tray,
+  #clock,
+  #power-profiles-daemon,
+  #idle_inhibitor,
+  #custom-power {
+    background-image: none;
+  }
+
+  #custom-power {
+    color: $background_color;
+    background-color: $primary_color;
+  }
+
+  #battery.critical:not(.charging) {
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+
+  #custom-media {
+    min-width: 100px;
+  }
+
+  #tray {
+    > .passive {
+      -gtk-icon-effect: dim;
+    }
+
+    > .needs-attention {
+      -gtk-icon-effect: highlight;
+    }
+  }
+
+  #privacy {
+    padding: 0;
+  }
+  #privacy-item {
+    padding: 0 5px;
+  }
+
+  // states
+  #power-profiles-daemon.performance {
+    @include red-background-gradient;
+  }
+
+  #power-profiles-daemon.balanced {
+    @include blue-background-gradient;
+  }
+
+  #idle_inhibitor.activated,
+  #power-profiles-daemon.power-saver,
+  #battery.charging {
+    @include green-background-gradient;
+  }
+
+  #battery.plugged,
+  #wireplumber.muted,
+  #pulseaudio.muted,
+  #network.disconnected {
+    @include grey-background-gradient;
+  }
+
+  #custom-media.custom-vlc {
+    @include orange-background-gradient;
+  }
+
+  #battery.critical:not(.charging),
+  #temperature.critical {
+    @include critical-background-gradient;
+
+    border: 1px solid #fbf1c7;
+  }
+
+  #privacy-item.screenshare,
+  #privacy-item.audio-in,
+  #privacy-item.audio-out {
+    @include success-background-gradient;
+
+    border: 1px solid #fbf1c7;
+  }
+}

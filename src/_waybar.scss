@@ -1,0 +1,103 @@
+window#waybar {
+  font-family: FontAwesome, Liberation, monospace;
+  font-size: 13px;
+  color: $primary_color;
+
+  border-bottom: 0px solid transparent;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  padding: 0 2px 2px;
+  margin: 0 4px;
+
+  background-color: $background_color;
+
+  &:first-child {
+    @include secondary-background-gradient;
+  }
+
+  &.hidden {
+    opacity: 0.2;
+  }
+
+  &.empty {
+    background-color: transparent;
+  }
+
+  button {
+    box-shadow: inset 0 -3px transparent;
+    border: 0;
+    border-radius: 0;
+
+    &:hover {
+      background: inherit;
+      box-shadow: inset 0 -3px #fbf1c7;
+    }
+  }
+
+  #workspaces {
+    margin: 0 4px;
+
+    button {
+      padding: 0 5px;
+      background-color: transparent;
+
+      &.active {
+        box-shadow: inset 0 -3px #fbf1c7;
+      }
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.2);
+      }
+
+      &.focused {
+        background-color: #64727d;
+        box-shadow: inset 0 -3px #ffffff;
+      }
+
+      &.urgent {
+        background-color: #eb4d4b;
+      }
+    }
+  }
+
+  .modules-left {
+    margin-left: 10px;
+
+    > widget:first-child > #workspaces {
+      margin-left: 0;
+    }
+  }
+
+  .modules-right {
+    margin-right: 10px;
+
+    > widget:last-child > #workspaces {
+      margin-right: 0;
+    }
+  }
+
+  label {
+    &.module {
+      margin: 7px 0;
+      opacity: 0.75;
+
+      border: 1px solid #060006;
+      border-radius: 12px;
+      padding: 0 7px;
+
+      background-image: linear-gradient(
+        to right,
+        rgba(107, 14, 14, 0.1) 0%,
+        rgba(42, 9, 9, 0.3) 20%,
+        rgba(33, 3, 40, 0.4) 60%,
+        rgba(8, 0, 8, 0.5) 100%
+      );
+      transition: 0.5s;
+      background-size: 200% auto;
+    }
+
+    &:focus {
+      background-color: #000000;
+    }
+  }
+}
