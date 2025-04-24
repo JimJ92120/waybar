@@ -2,8 +2,9 @@
   "name": "waybar-custom",
   "version": "0.1.0",
   "scripts": {
-    "build:dev": "webpack --mode=development && rm -rf dist/*.js",
-    "build": "webpack --mode=production && rm -rf dist/*.js",
+    "build:after": "rm -rf dist/*.js style.css && cp dist/style.css style.css",
+    "build:dev": "webpack --mode=development && npm run build:after",
+    "build": "webpack --mode=production && npm run build:after",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
