@@ -2,6 +2,8 @@
 
 Some `waybar` config and theming.
 
+![screenshot](./screenshot.png)
+
 ---
 
 ---
