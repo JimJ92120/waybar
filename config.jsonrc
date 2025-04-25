@@ -133,7 +133,8 @@
   },
   "cpu": {
     "format": "{usage}% ",
-    "tooltip": false
+    "tooltip": false,
+    "on-click": "kitty -e htop"
   },
   "custom/temperature_gpu": {
     "format": "{}°C",

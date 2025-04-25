@@ -100,4 +100,8 @@ window#waybar {
       background-color: #000000;
     }
   }
+
+  menu {
+    @include popup;
+  }
 }

@@ -57,3 +57,13 @@
   border-radius: 15px;
   padding: 0 5px;
 }
+
+@mixin popup {
+  @include background-reset;
+
+  background-color: $background-color;
+  color: $primary_color;
+  opacity: 0.9;
+  padding: 5px;
+  border-radius: 10px;
+}
