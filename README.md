@@ -31,15 +31,19 @@ npm run build # production
 
 ```
 /
-  style.css
-
+  /config
+    style.css
   /dist
     style.css
 ```
 
 # run
 
+Copy the `config/` directory content to `~/.config/waybar` then:
+
 ```sh
+cd ~/.config/waybar
+
 chmod +x ./waybar.sh
 
 ./waybar.sh
