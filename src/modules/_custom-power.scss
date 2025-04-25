@@ -1,0 +1,7 @@
+#custom-power {
+  @include badge-rounded;
+
+  background-color: $primary_color;
+  background-image: none;
+  color: $background_color;
+}

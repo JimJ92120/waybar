@@ -1,0 +1,7 @@
+#custom-media {
+  min-width: 100px;
+
+  &.custom-vlc {
+    @include orange-background-gradient;
+  }
+}

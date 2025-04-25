@@ -3,4 +3,20 @@
 
 @import "./animations";
 @import "./waybar";
-@import "./modules";
+
+window#waybar {
+  @import "./modules/battery";
+  @import "./modules/clock";
+  @import "./modules/custom-media";
+  @import "./modules/custom-nixos-clean";
+  @import "./modules/custom-power";
+  @import "./modules/idle-inhibitor";
+  @import "./modules/mode";
+  @import "./modules/network";
+  @import "./modules/power-profiles-daemon";
+  @import "./modules/privacy";
+  @import "./modules/pulseaudio";
+  @import "./modules/temperature";
+  @import "./modules/tray";
+  @import "./modules/wireplumber";
+}

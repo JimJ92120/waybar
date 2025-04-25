@@ -1,0 +1,11 @@
+#tray {
+  @include badge-rounded;
+
+  > .passive {
+    -gtk-icon-effect: dim;
+  }
+
+  > .needs-attention {
+    -gtk-icon-effect: highlight;
+  }
+}

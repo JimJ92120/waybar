@@ -1,0 +1,5 @@
+#network {
+  &.disconnected {
+    @include grey-background-gradient;
+  }
+}

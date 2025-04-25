@@ -1,0 +1,5 @@
+#pulseaudio {
+  &.muted {
+    @include grey-background-gradient;
+  }
+}

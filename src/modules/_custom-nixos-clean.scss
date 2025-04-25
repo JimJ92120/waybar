@@ -1,0 +1,6 @@
+#custom-nixos-clean {
+  @include badge-rounded;
+  @include grey-background-gradient;
+
+  font-size: 18px;
+}

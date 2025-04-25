@@ -1,0 +1,15 @@
+#privacy {
+  padding: 0;
+}
+
+#privacy-item {
+  padding: 0 5px;
+
+  &.screenshare,
+  &.audio-in,
+  &.audio-out {
+    @include success-background-gradient;
+
+    border: 1px solid #fbf1c7;
+  }
+}

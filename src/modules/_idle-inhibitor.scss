@@ -1,0 +1,9 @@
+#idle_inhibitor {
+  @include badge-rounded;
+
+  background-image: none;
+
+  &.activated {
+    @include green-background-gradient;
+  }
+}

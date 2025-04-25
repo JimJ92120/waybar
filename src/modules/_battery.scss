@@ -1,0 +1,21 @@
+#battery {
+  &.charging {
+    @include green-background-gradient;
+  }
+
+  &.plugged {
+    @include grey-background-gradient;
+  }
+
+  &.critical:not(.charging) {
+    @include critical-background-gradient;
+
+    border: 1px solid #fbf1c7;
+
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+}

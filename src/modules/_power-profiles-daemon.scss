@@ -1,0 +1,15 @@
+#power-profiles-daemon {
+  background-image: none;
+
+  &.performance {
+    @include red-background-gradient;
+  }
+
+  &.power-saver {
+    @include green-background-gradient;
+  }
+
+  &.balanced {
+    @include blue-background-gradient;
+  }
+}
