@@ -62,7 +62,7 @@
   "power-profiles-daemon": {
     "format": "{icon}",
     "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-    "tooltip": true,
+    "tooltip": false,
     "format-icons": {
       "default": "",
       "performance": "",
@@ -120,16 +120,19 @@
       "car": "",
       "default": ["", "", ""]
     },
-    "on-click": "pavucontrol"
+    "on-click": "pavucontrol",
+    "tooltip": false
   },
   "memory": {
-    "format": "{}% "
+    "format": "{}% ",
+    "tooltip": false
   },
   "temperature": {
     "thermal-zone": 5,
     "critical-threshold": 90,
     "format": "{temperatureC}°C",
-    "format-icons": ["", "", ""]
+    "format-icons": ["", "", ""],
+    "tooltip": false
   },
   "cpu": {
     "format": "{usage}% ",
@@ -172,10 +175,12 @@
     "format-charging": "{capacity}% ",
     "format-plugged": "{capacity}% ",
     "format-alt": "{time} {icon}",
-    "format-icons": ["", "", "", "", ""]
+    "format-icons": ["", "", "", "", ""],
+    "tooltip": false
   },
   "tray": {
-    "spacing": 10
+    "spacing": 10,
+    "tooltip": false
   },
   "custom/power": {
     "format": "⏻",
