@@ -9,7 +9,11 @@
     "hyprland/mode",
     "custom/media"
   ],
-  "modules-center": ["idle_inhibitor", "clock", "power-profiles-daemon"],
+  "modules-center": [
+    "idle_inhibitor",
+    "clock",
+    "power-profiles-daemon"
+  ],
   "modules-right": [
     "custom/nixos-clean",
     "mpd",
@@ -24,7 +28,6 @@
     "tray",
     "custom/power"
   ],
-  // left
   "hyprland/workspaces": {
     "active-only": false,
     "all-outputs": false
@@ -47,7 +50,6 @@
     "escape": true,
     "exec": "$HOME/.config/waybar/modules/mediaplayer.py 2> /dev/null"
   },
-  // center
   "idle_inhibitor": {
     "format": "{icon}",
     "format-icons": {
@@ -70,8 +72,6 @@
       "power-saver": ""
     }
   },
-
-  // right
   "custom/nixos-clean": {
     "format": "&#9851;",
     "return-type": "",
@@ -118,7 +118,11 @@
       "phone": "",
       "portable": "",
       "car": "",
-      "default": ["", "", ""]
+      "default": [
+        "",
+        "",
+        ""
+      ]
     },
     "on-click": "pavucontrol",
     "tooltip": false
@@ -131,7 +135,11 @@
     "thermal-zone": 5,
     "critical-threshold": 90,
     "format": "{temperatureC}°C",
-    "format-icons": ["", "", ""],
+    "format-icons": [
+      "",
+      "",
+      ""
+    ],
     "tooltip": false
   },
   "cpu": {
@@ -156,12 +164,10 @@
   },
   "network": {
     "format-wifi": "{essid} ({signalStrength}%) ",
-    // "format-ethernet": "{ipaddr}/{cidr} ",
     "format-ethernet": "",
     "tooltip-format": "{ifname} via {gwaddr} ",
     "format-linked": "{ifname} (No IP) ",
     "format-disconnected": "Disconnected ⚠",
-    // "format-alt": "{ifname}: {ipaddr}/{cidr}"
     "tooltip": false
   },
   "battery": {
@@ -175,7 +181,13 @@
     "format-charging": "{capacity}% ",
     "format-plugged": "{capacity}% ",
     "format-alt": "{time} {icon}",
-    "format-icons": ["", "", "", "", ""],
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
     "tooltip": false
   },
   "tray": {
