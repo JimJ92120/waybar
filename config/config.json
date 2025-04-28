@@ -9,12 +9,9 @@
     "hyprland/mode",
     "custom/media"
   ],
-  "modules-center": [
-    "idle_inhibitor",
-    "clock",
-    "power-profiles-daemon"
-  ],
+  "modules-center": ["idle_inhibitor", "clock", "power-profiles-daemon"],
   "modules-right": [
+    "custom/reboot-bios",
     "custom/nixos-clean",
     "mpd",
     "pulseaudio",
@@ -72,6 +69,12 @@
       "power-saver": ""
     }
   },
+  "custom/reboot-bios": {
+    "format": "&#9965;",
+    "return-type": "",
+    "on-click": "systemctl reboot --firmware-setup",
+    "tooltip": false
+  },
   "custom/nixos-clean": {
     "format": "&#9851;",
     "return-type": "",
@@ -118,11 +121,7 @@
       "phone": "",
       "portable": "",
       "car": "",
-      "default": [
-        "",
-        "",
-        ""
-      ]
+      "default": ["", "", ""]
     },
     "on-click": "pavucontrol",
     "tooltip": false
@@ -135,11 +134,7 @@
     "thermal-zone": 5,
     "critical-threshold": 90,
     "format": "{temperatureC}°C",
-    "format-icons": [
-      "",
-      "",
-      ""
-    ],
+    "format-icons": ["", "", ""],
     "tooltip": false
   },
   "cpu": {
@@ -181,13 +176,7 @@
     "format-charging": "{capacity}% ",
     "format-plugged": "{capacity}% ",
     "format-alt": "{time} {icon}",
-    "format-icons": [
-      "",
-      "",
-      "",
-      "",
-      ""
-    ],
+    "format-icons": ["", "", "", "", ""],
     "tooltip": false
   },
   "tray": {

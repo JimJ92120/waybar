@@ -53,6 +53,43 @@ chmod +x ./waybar.sh
 
 ---
 
+# add module
+
+#### config
+
+```json
+// config/config.json
+{
+  "modules-left": [],
+  "modules-center": [],
+  "modules-right": ["custom-my-module"],
+  "custom/reboot-bios": {
+    "format": "&#9965;",
+    "return-type": "",
+    "on-click": "systemctl reboot --firmware-setup",
+    "tooltip": false
+  }
+}
+```
+
+#### style
+
+```scss
+// src/modules/custom-my-module.scss
+.custom-* {
+  //
+}
+
+// src/main.scss
+window#waybar {
+  @import "./modules/custom-my-module.scss";
+}
+```
+
+---
+
+---
+
 # nixos
 
 Example to add to `nixos` configuration with `home-manager`:
