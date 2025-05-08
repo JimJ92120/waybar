@@ -11,20 +11,32 @@
   ],
   "modules-center": ["idle_inhibitor", "clock", "power-profiles-daemon"],
   "modules-right": [
-    "custom/reboot-bios",
-    "custom/nixos-clean",
+    "group/scripts",
+    "group/hardware",
+
     "mpd",
     "pulseaudio",
-    "memory",
-    "temperature",
-    "cpu",
-    "custom/temperature_gpu",
-    "custom/gpu",
     "network",
     "battery",
     "tray",
     "custom/power"
   ],
+
+  "group/hardware": {
+    "orientation": "horizontal",
+    "modules": [
+      "memory",
+      "temperature",
+      "cpu",
+      "custom/temperature_gpu",
+      "custom/gpu"
+    ]
+  },
+  "group/scripts": {
+    "orientation": "horizontal",
+    "modules": ["custom/reboot-bios", "custom/nixos-clean"]
+  },
+
   "hyprland/workspaces": {
     "active-only": false,
     "all-outputs": false
