@@ -67,3 +67,10 @@
   padding: 5px;
   border-radius: 10px;
 }
+
+@mixin group {
+  @include background-reset;
+
+  margin-right: 10px;
+  margin-left: 10px;
+}

@@ -20,4 +20,7 @@ window#waybar {
   @import "./modules/temperature";
   @import "./modules/tray";
   @import "./modules/wireplumber";
+
+  @import "./groups/hardware";
+  @import "./groups/scripts";
 }

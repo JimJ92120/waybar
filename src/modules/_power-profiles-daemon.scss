@@ -1,4 +1,6 @@
 #power-profiles-daemon {
+  @include badge-rounded;
+
   background-image: none;
 
   &.performance {
