@@ -1,6 +1,8 @@
 #idle_inhibitor {
   @include badge;
 
+  border-radius: 0 5px 0 5px;
+
   &.activated {
     @include green-background-gradient;
   }
