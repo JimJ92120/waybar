@@ -1,0 +1,8 @@
+#main {
+  @include group;
+
+  margin-right: 0;
+  padding-right: 5px;
+
+  border-radius: 0 0 0 5px;
+}

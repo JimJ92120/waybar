@@ -5,6 +5,12 @@
 @import "./waybar";
 
 window#waybar {
+  @import "./groups/main";
+  @import "./groups/workspaces";
+  @import "./groups/hardware";
+  @import "./groups/scripts";
+  @import "./groups/hypr";
+
   @import "./modules/battery";
   @import "./modules/clock";
   @import "./modules/custom-media";
@@ -20,7 +26,4 @@ window#waybar {
   @import "./modules/temperature";
   @import "./modules/tray";
   @import "./modules/wireplumber";
-
-  @import "./groups/hardware";
-  @import "./groups/scripts";
 }
