@@ -16,9 +16,9 @@
     "modules": [
       "mpd",
       "pulseaudio",
+      "tray",
       "network",
       "battery",
-      "tray",
       "custom/power"
     ]
   },
