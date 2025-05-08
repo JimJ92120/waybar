@@ -1,6 +1,6 @@
 #custom-reboot-bios {
   @include badge-rounded;
-  @include grey-background-gradient;
+  @include background-reset;
 
   font-size: 18px;
 }
