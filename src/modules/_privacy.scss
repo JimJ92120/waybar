@@ -1,5 +1,5 @@
 #privacy {
-  padding: 0;
+  //
 }
 
 #privacy-item {
@@ -9,7 +9,5 @@
   &.audio-in,
   &.audio-out {
     @include success-background-gradient;
-
-    border: 1px solid #fbf1c7;
   }
 }

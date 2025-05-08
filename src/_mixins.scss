@@ -53,9 +53,8 @@
   background-image: $orange_gradient;
 }
 
-@mixin badge-rounded {
-  // border-radius: 15px;
-  padding: 0 5px;
+@mixin badge {
+  //
 }
 
 @mixin popup {
@@ -77,16 +76,22 @@
 }
 
 @mixin group {
-  @include background-reset;
-  @include secondary-background-gradient;
-
-  margin: 0 2px;
-  border: 0px solid transparent;
-  border-radius: 0 0 5px 5px;
+  padding: 0 5px;
 
   .module {
-    border: none;
-    background-image: none;
-    border: 1px solid transparent;
+    //
   }
+}
+
+$font: FontAwesome, Liberation, monospace;
+@mixin reset {
+  @include background-reset;
+
+  font-family: $font;
+  font-size: 13px;
+  color: $primary_color;
+  border: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
 }

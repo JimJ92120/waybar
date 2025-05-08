@@ -1,6 +1,4 @@
 #tray {
-  @include badge-rounded;
-
   > .passive {
     -gtk-icon-effect: dim;
   }
