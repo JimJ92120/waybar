@@ -1,5 +1,8 @@
 #temperature {
   &.critical {
     @include critical-background-gradient;
+
+    border: 0px solid transparent;
+    border-radius: 5px 0 5px 0;
   }
 }

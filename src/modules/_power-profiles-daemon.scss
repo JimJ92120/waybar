@@ -1,8 +1,7 @@
 #power-profiles-daemon {
   @include badge;
 
-  border: 0px solid transparent;
-  border-radius: 0 0 5px 0;
+  border-radius: 0 5px 0 5px;
 
   &.performance {
     @include red-background-gradient;

@@ -54,7 +54,8 @@
 }
 
 @mixin badge {
-  //
+  border: 0px solid transparent;
+  border-radius: 5px 0 5px 0;
 }
 
 @mixin popup {

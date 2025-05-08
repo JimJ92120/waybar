@@ -1,6 +1,8 @@
 #custom-power {
   @include badge;
 
+  border-radius: 5px 0 0 0;
+
   background-color: $primary_color;
   color: $background_color;
 }
